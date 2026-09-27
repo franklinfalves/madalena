@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gerar QR Code • Você com a gente no mercado</title>
+<style>
+body{font-family:system-ui;background:#f4f0e6;color:#173f2b;margin:0}.box{max-width:600px;margin:40px auto;padding:25px;background:#fff;border-radius:22px;box-shadow:0 10px 30px #0001}h1{text-align:center}input{width:100%;padding:14px;border:1px solid #ccd5cc;border-radius:12px;font-size:16px;box-sizing:border-box}button{width:100%;margin-top:12px;padding:14px;border:0;border-radius:12px;background:#173f2b;color:#fff;font-weight:800;font-size:16px}#qrcode{display:flex;justify-content:center;margin:25px}p{font-size:14px;text-align:center}.print{background:#e5b83e;color:#3b2a07}
+@media print{body{background:#fff}.box{box-shadow:none;margin:0}.no-print{display:none!important}}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>📱 Você com a gente no mercado</h1>
+<div class="no-print">
+<p>Digite aqui o endereço público do seu <b>index.html</b>.</p>
+<input id="url" placeholder="https://seusite.com/voce-com-a-gente-no-mercado/">
+<button onclick="gerar()">Gerar QR Code</button>
+</div>
+<div id="qrcode"></div>
+<p id="label"></p>
+<button class="print no-print" onclick="window.print()">🖨️ Imprimir QR Code</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+function gerar(){
+ const url=document.getElementById("url").value.trim();
+ if(!url){alert("Digite o endereço do aplicativo.");return}
+ document.getElementById("qrcode").innerHTML="";
+ new QRCode(document.getElementById("qrcode"),{text:url,width:260,height:260,colorDark:"#173f2b",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H});
+ document.getElementById("label").textContent="Aponte a câmera do celular para este QR Code.";
+}
+</script>
+</body>
+</html>

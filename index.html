@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#173f2b">
+  <title>Você com a gente no mercado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="badge">FEIRA DE CIÊNCIAS</div>
+      <h1>Você com a gente<br>no mercado</h1>
+      <p>Entre na foto do Mercado da Madalena!</p>
+    </header>
+
+    <section class="card">
+      <div class="stage-wrap">
+        <div class="stage">
+          <video id="video" autoplay muted playsinline></video>
+          <canvas id="previewCanvas"></canvas>
+          <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <span>Preparando a câmera...</span>
+          </div>
+          <div id="guide" class="guide">
+            <div class="guide-box"></div>
+            <p>Fique dentro da área<br>e deixe um pouco de espaço acima da cabeça.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="status" class="status">Toque em “Abrir câmera” para começar.</div>
+
+      <div class="controls">
+        <button id="startBtn" class="primary">📷 Abrir câmera</button>
+        <button id="captureBtn" class="primary hidden">● Tirar foto</button>
+        <button id="switchBtn" class="secondary hidden">🔄 Trocar câmera</button>
+        <button id="againBtn" class="secondary hidden">↩ Tirar outra</button>
+        <a id="downloadBtn" class="primary download hidden" download="voce-com-a-gente-no-mercado.jpg">⬇ Salvar foto</a>
+      </div>
+    </section>
+
+    <section class="info">
+      <strong>Como funciona?</strong>
+      <ol>
+        <li>Permita o acesso à câmera.</li>
+        <li>Use a câmera traseira e fique em frente ao celular.</li>
+        <li>Toque em “Tirar foto”.</li>
+        <li>O app recorta você e coloca o Mercado da Madalena no fundo.</li>
+        <li>Salve a foto no celular.</li>
+      </ol>
+      <p class="privacy">A foto é processada no próprio aparelho e não é enviada para este site.</p>
+    </section>
+
+    <footer>Projeto escolar • “Você com a gente no mercado”</footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.2.0/dist/body-pix.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
