@@ -1,56 +1,24 @@
-# Você com a gente no mercado
+VOCÊ COM A GENTE NO MERCADO
 
-Projeto web para a Feira de Ciências.
+Projeto da Feira de Ciências com câmera e recorte automático da pessoa.
+Tema visual: azul e rosa.
+Fundo: foto real do Mercado da Madalena.
 
-## Fluxo
-1. O visitante aponta o celular para o QR Code.
-2. O site pede acesso à câmera.
-3. A câmera traseira é usada por padrão (`facingMode: environment`).
-4. O BodyPix faz a segmentação da pessoa diretamente no navegador.
-5. A pessoa é colocada sobre a imagem do Mercado da Madalena.
-6. O visitante salva a foto no próprio celular.
+IMPORTANTE:
+- O site precisa ser aberto em HTTPS para acessar a câmera do celular.
+- No GitHub Pages, publique a branch main na pasta / (root).
+- A página principal é index.html.
+- qr.html gera um QR Code para a página do projeto.
 
-## IMPORTANTE: coloque a foto do Mercado da Madalena
-Substitua:
-`assets/mercado-madalena.jpg`
+A foto é processada no próprio aparelho pelo BodyPix.
 
-por uma foto real, preferencialmente:
-- orientação vertical (9:16 ou 3:4);
-- boa resolução;
-- com espaço livre onde as pessoas vão aparecer;
-- autorizada para uso no trabalho escolar.
 
-Não é necessário alterar o JavaScript.
+AUTORAS:
+Na pasta assets existem quatro fotos-placeholder:
+autora-1.jpg
+autora-2.jpg
+autora-3.jpg
+autora-4.jpg
 
-## Hospedagem
-O projeto é estático. Pode ser colocado em qualquer hospedagem que sirva HTML/JS/CSS.
-
-A câmera do navegador normalmente exige HTTPS. Não use apenas HTTP em um domínio público.
-
-## QR Code
-Depois de publicar, abra:
-`qr.html`
-
-Digite a URL pública do `index.html`, gere o QR Code e imprima.
-
-## Teste local
-Para testar no computador, não abra o arquivo diretamente com `file://`.
-Use um servidor local, por exemplo:
-`python -m http.server 8000`
-
-Depois acesse:
-`http://localhost:8000`
-
-Em celular, para câmera funcionar em produção, publique em HTTPS.
-
-## Escala da pessoa
-No `app.js`, a variável `scale=0.68` controla o tamanho da pessoa na composição. Quanto menor o valor, mais distante a pessoa parecerá e mais fundo aparecerá.
-
-## Personalização
-- Nome do projeto: `index.html`
-- Cores: `style.css`
-- Fundo: `assets/mercado-madalena.jpg`
-- Texto da moldura final: `app.js`
-
-## Privacidade
-A segmentação e a montagem da imagem acontecem no navegador. O projeto não possui backend nem banco de dados e não envia automaticamente as fotos para um servidor.
+Substitua cada arquivo pela foto correspondente da aluna, mantendo exatamente o mesmo nome.
+Depois, no index.html, troque "Nome da aluna 1", etc., pelos nomes reais.
