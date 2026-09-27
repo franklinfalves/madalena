@@ -178,9 +178,9 @@ async function capture(){
   ctx.fillStyle="#173f2b";
   ctx.font=`800 ${Math.max(22,w/25)}px system-ui`;
   ctx.textAlign="left";
-  ctx.fillText("VOCÊ COM A GENTE NO MERCADO",28,h-48);
+  ctx.fillText("VOCÊ NO MERCADO",28,h-48);
   ctx.font=`500 ${Math.max(15,w/48)}px system-ui`;
-  ctx.fillText("Feira de Ciências • Mercado da Madalena",28,h-20);
+  ctx.fillText("Feira de Ciências",28,h-20);
 
   previewCanvas.width=w; previewCanvas.height=h;
   previewCanvas.getContext("2d").drawImage(work,0,0);
